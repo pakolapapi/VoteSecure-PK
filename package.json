@@ -1,0 +1,27 @@
+{
+  "name": "votesecure-pk",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {"node": ">=22.13"},
+  "scripts": {
+    "dev": "concurrently -k \"node --env-file=.env --watch server/index.mjs\" \"node --env-file=.env node_modules/vite/bin/vite.js\"",
+    "build": "vite build",
+    "start": "node --env-file=.env server/index.mjs",
+    "test": "node --test tests/core.test.mjs tests/credential.test.mjs",
+    "test:integration": "node --env-file=.env --test tests/integration.test.mjs",
+    "audit": "node scripts/verify-audit.mjs"
+  },
+  "dependencies": {
+    "@cloudflare/blindrsa-ts": "0.4.6",
+    "express": "^5.1.0",
+    "pg": "^8.16.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.5.0",
+    "concurrently": "^9.1.2",
+    "vite": "^6.3.5"
+  }
+}
