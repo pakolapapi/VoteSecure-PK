@@ -1,4 +1,3 @@
-
 # VoteSecure PK
 
 VoteSecure PK is a local academic prototype of the Pakistan Digital Electoral Voting and Verification Platform. It uses React, a Node.js/Express API, and PostgreSQL. The election, voter accounts and verification service are entirely synthetic.
